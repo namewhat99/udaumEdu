@@ -1,6 +1,6 @@
 
 export const homeHandler = (req , res) => {
-    res.render('main.html');
+    res.render('index.html');
 }
 
 export const myPageHandler = (req , res) => {
