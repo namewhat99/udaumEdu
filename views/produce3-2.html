@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.rtl.min.css"
+            integrity="sha384-7mQhpDl5nRA5nY9lr8F1st2NbIly/8WqhjTp+0oFxEA/QUuvlbF6M1KXezGBh3Nb"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <title>UDAUM EDU PRODUCE</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body style="background-color: #fafafa;">
+        <!-- 알림 드롭바-->
+        <div class="dropdown_box_notice" id="navbarNavDropdown">
+            <ul class="navbar-nav-dropdown" style="top: 390px;">
+                <li class="nav-item-dropdown">
+                    <a
+                        class="nav-link"
+                        href="dropdown-menu"
+                        src="img/notice.png"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <img
+                            src="img/notice.png"
+                            style="
+                                width: 27.3px;
+                                height: 36.8px;
+                                z-index: 4000;
+                                right: 180px;
+                                top: 35px;
+                                position: absolute;
+                            "
+                        />
+                    </a>
+                    <!--show면, 
+               <ul class="dropdown-menu show" data-popper-reference-hidden="" data-popper-placement="bottom-end" style="position: absolute; inset: 80px 0px auto auto; margin: 0px; transform: translate3d(-32px, 2px, 0px);">
+-->
+                    <div class="dropdown-menu-position">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="main.html">공지사항</a></li>
+                            <li><a class="dropdown-item" href="#">유디터 사용설명서</a></li>
+                            <li><a class="dropdown-item" href="#">문의처</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <nav
+            class="navbar navbar-expand-lg nav-distance"
+            style="background-color: #fafafa; padding-bottom: 25px;"
+        >
+            <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+                <div class="navbar-logo">
+                    <img src="img/logo3.png" style="width: 46px; height: 46px;" />
+                </div>
+
+                <div class="navbar-logo_udaum">
+                    <img src="img/logo_udaum3.png" style="width: 85px; height: 15px;" />
+                </div>
+
+                <!-- 홈으로 돌아가기 버튼
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+-->
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" style="padding-left: 25px;">
+                        <li class="nav-item1" style="height: 50px;">
+                            <a
+                                class="nav-link"
+                                href="/"
+                                style="
+                                    width: 28px;
+                                    padding-left: 0px;
+                                    padding-right: 0px;
+                                    line-height: 46px;
+                                "
+                                >홈</a
+                            >
+                            <img
+                                class="imgbar"
+                                src="img/bar1.png"
+                                style="width: 28px; height: 5px;"
+                            />
+                        </li>
+                        <li class="nav-item2" style="height: 50px;">
+                            <a
+                                class="nav-link"
+                                href="produce1.html"
+                                style="padding-left: 0px; padding-right: 0px; line-height: 46px;"
+                                >콘텐츠 제작하기</a
+                            >
+                            <img
+                                class="imgbar"
+                                src="img/bar1.png"
+                                style="width: 28px; height: 5px;"
+                            />
+                        </li>
+                    </ul>
+                </div>
+
+                <!--네비게이션 우측-->
+                <div class="navbar-login">
+                    <button type="button" id="profile_btn" onclick="#" style="padding-left: 31px;">
+                        <img src="img/profile.png" style="width: 37px; height: 37px;" />
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-lg nav-distance" style="background-color: fafafa;">
+            <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" style="padding-left: 46px; padding-top: 50px;">
+                        <li class="produce-nav-item1" style="height: 50px; width: 93px;">
+                            <a
+                                class="produce-nav-link"
+                                href="/makeContents1"
+                                style="
+                                    width: 28px;
+                                    padding-left: 0px;
+                                    padding-right: 0px;
+                                    line-height: 46px;
+                                "
+                                >STEP1</a
+                            >
+                            <img
+                                class="imgbar2"
+                                src="img/make_bar1.png"
+                                style="width: 45px; height: 5px;"
+                            />
+                        </li>
+                        <li class="produce-nav-item2" style="height: 50px;">
+                            <a
+                                class="produce-nav-link"
+                                href="/makeContents2"
+                                style="padding-left: 0px; padding-right: 0px; line-height: 46px;"
+                                >STEP2</a
+                            >
+                            <img
+                                class="imgbar2"
+                                src="img/make_bar1.png"
+                                style="width: 45px; height: 5px;"
+                            />
+                        </li>
+
+                        <li class="produce-nav-item3" style="height: 50px;">
+                            <a
+                                class="produce-nav-link"
+                                href="/makeContents3"
+                                style="
+                                    padding-left: 0px;
+                                    padding-right: 0px;
+                                    line-height: 46px;
+                                    color: #0606c6;
+                                "
+                                >STEP3</a
+                            >
+                            <img
+                                class="imgbar2"
+                                src="img/make_bar1.png"
+                                style="width: 45px; height: 5px; display: block;"
+                            />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="produce_main_writing">
+            문제 입력하기
+        </div>
+
+        <div class="produce_serve_writing">
+            문제와 보기, 답안을 입력해 보세요
+        </div>
+
+        <div class="problem">
+            <div class="problem_list">
+                <span class="problem_list_num"> 문제 1번 </span>
+            </div>
+
+          <div class="problem_contents2">
+                <div class="search2">
+                    <input type="text" placeholder="1번 문제를 입력하세요(공백 포함 100자 이내)" />
+                </div>
+                <img class="ex1" src="img/ex1.png" />
+                <br>
+                
+                
+                
+                
+                      <img class="produce3_1_intro" src="img/produce3_1_intro.png" />
+              
+              
+                      <!--키워드 입력-->
+              
+                <ul class="problem_contents2_option" >
+           
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        
+                    </div>
+                </li>
+                <li>
+                   <div>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                   </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                    </div>
+                </li>
+
+                <li>
+                     <div>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                     </div>
+                </li>
+
+                </ul>
+ 
+
+              
+              
+               <ul class="problem_contents2_option" >
+           
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        
+                    </div>
+                </li>
+                <li>
+                   <div>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                   </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                    </div>
+                </li>
+
+                <li>
+                     <div>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                     </div>
+                </li>
+
+                </ul>
+ 
+              
+               <ul class="problem_contents2_option" >
+           
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        
+                    </div>
+                </li>
+                <li>
+                   <div>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                   </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                    </div>
+                </li>
+
+                <li>
+                     <div>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                     </div>
+                </li>
+
+                </ul>
+ 
+              
+               <ul class="problem_contents2_option" >
+           
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        
+                    </div>
+                </li>
+                <li>
+                   <div>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                   </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                    </div>
+                </li>
+
+                <li>
+                     <div>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                     </div>
+                </li>
+
+                </ul>
+ 
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+           
+        
+        
+        
+        <!--이전/다음 버튼-->
+        
+        
+               <div class="produce_next" style="text-align: right;">
+           
+                <button type="button" id="back_btn" onclick="location.href = '/makeContents1'">
+                    <img
+                        src="img/back_btn.png"
+                        style="margin-top: 0px; width: 119px; height: 48px;"
+                    />
+                </button>
+                
+                 <button type="button" id="ok_btn" onclick= clickFunction()>
+                    <img
+                        src="img/ok_btn.png"
+                        style="margin-top: 0px; margin-right: 290px;width: 119px; height: 48px;"
+                    />
+                </button>
+                
+            </div>
+        
+        <script>
+            function clickFunction(){
+                const pageNum = sessionStorage.getItem('pageNum')
+                console.log(pageNum)
+                if(pageNum == 1){
+                    href.location ='/'
+                }
+                else if(pageNum == 2){
+                    href.location = '/myPage'
+                }
+                else{
+                    href.location = '/makeContents1'
+                }
+            }
+        </script>
+        
+        
+    </body>
+</html>
