@@ -1312,12 +1312,14 @@ img.-\31_271 {
   position: absolute;
   left: 297px;
   top: 237.9px;
+  z-index: 5;
 }
 
 .main_3_letters{
   position: absolute;
-  left: 430px;
+  left: 295px;
   top: 237.9px;
+  z-index: 3;
 }
 
 .main_3_letters2{
@@ -1331,6 +1333,7 @@ img._U-_1 {
   width: 294px;
   height: 63px;
   object-fit: contain;
+  border: none
 }
 
 .-\31_404 {
@@ -1346,7 +1349,9 @@ padding-left: 104px; padding-top: 73px; */
   margin-top: 87px;
   object-fit: contain; 
   margin: auto;
-  position: relative
+  position: relative;
+  background-color: white;
+
 }
 
 .main_1_button{
@@ -1357,6 +1362,7 @@ padding-left: 104px; padding-top: 73px; */
 .main_1_explain{
   position: absolute;
   left:340px; top:200px;
+  background-color: white;
 }
 
 .main_2 {
@@ -1379,12 +1385,13 @@ padding-left: 104px; padding-top: 73px; */
   position: absolute;
   left: 1198px;
   top: 298px;
+  font-size: 35px;
 }
 
 .main_2_letters2{
   position: absolute;
   left: 1058px;
-  top: 400px;
+  top: 410px;
 }
 
 img.-\31_277 {
@@ -1523,4 +1530,14 @@ img.-\31_402 {
   position: absolute;
   left: 155px;
   top: 250px
+}
+.contents_button{
+  background-color: white;
+  border: none
+}
+.download_button{
+  border: none
+}
+.contents_button2{
+  border: none
 }
