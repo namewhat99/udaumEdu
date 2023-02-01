@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages-d build",
-    "build": "webpack --more production"
+    "build": "webpack"
   },
+  "homepage": "https://https://namewhat99.github.io/udaumEdu/",
   "author": "",
   "license": "MIT",
   "dependencies": {

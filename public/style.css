@@ -55,6 +55,7 @@
     border: 0;
     outline: 0;
     background-color: #fafafa;
+    
 }
 .navbar-bar {
     padding-left: 0px;
@@ -186,7 +187,7 @@
 
 .main3{
     
-      margin: 81px 29px 45px 323px;
+  margin: 81px 29px 45px 323px;
   object-fit: contain;
   font-family: Pretendard;
   font-size: 24px;
@@ -194,6 +195,7 @@
   line-height: 1;
   text-align: left;
   color: #000;
+
     
 }
 
@@ -1005,8 +1007,8 @@ width: 957px;
 
 
 .mypage_contents_img {
-     text-align: center;
- z-index: 1;
+    text-align: center;
+    z-index: 1;
 }
 
 .mypage_contents_img > button {
@@ -1014,7 +1016,7 @@ width: 957px;
     outline: 0;
     background-color: #f6f6f6;
     padding: 0;
-     z-index: 1;
+    z-index: 1;
 }
 
 .mypage_main{
@@ -1291,7 +1293,8 @@ img.-\31_271 {
 
 .main_3 {
   position : relative;
-  height : 1275.8px
+  height : 1275.8px;
+  
 }
 
 .main_3 > img {
@@ -1541,3 +1544,14 @@ img.-\31_402 {
 .contents_button2{
   border: none
 }
+
+#main2_text2{
+  width:100px; height:50px;
+  margin-top:13px;
+  margin-bottom: 5px;
+}
+
+#main2_text1{
+  margin-top:25px;
+}
+

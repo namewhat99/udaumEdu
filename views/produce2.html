@@ -210,21 +210,21 @@
         
          <ul class="produce2_main1" style="padding-top:121px;margin-left: 0px;width: 1948px;margin-right: 0px;padding-bottom: 121px;height: 515px;">
            
-                <li class = "color1">
+                <li class = "color1" onclick= "colorFunction(1)">
                     <div style="background-color: #ffe600;"></div>
                 </li>
-                <li class = "color2">
+                <li class = "color2" onclick= "colorFunction(2)">
                     <div style="background-color: #8f0404;"></div>
                 </li>
-                <li class = "color3">
+                <li class = "color3" onclick= "colorFunction(3)">
                     <div style="background-color: #00ffb1;"></div>
                 </li>
 
-                <li class = "color4">
+                <li class = "color4" onclick= "colorFunction(4)">
                     <div style="background-color: #9dcaf2;"></div>
                 </li>
 
-                <li class = "color5">
+                <li class = "color5" onclick= "colorFunction(5)">
                     <div style="background-color: #ff0000;"></div>
                 </li>
         </ul>
@@ -250,38 +250,36 @@
             </div>
             <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
             <script>
-                $(".color1").click(function () {
-                    sessionStorage.setItem('selectedColor' , 1)
-                })
-    
-                $(".color2").click(function () {
-                    sessionStorage.setItem('selectedColor' , 2)
-                })
-                $(".color3").click(function () {
-                    sessionStorage.setItem('selectedColor' , 3)
-                })
-                $(".color4").click(function () {
-                    sessionStorage.setItem('selectedColor' , 4)
-                })
-    
-                $(".color5").click(function () {
-                    sessionStorage.setItem('selectedColor' , 5)
-                })
+
+                function colorFunction(num){
+                    sessionStorage.setItem('selectedColor', num)
+                    for(var i = 1; i <= 5; i++){
+                        $(`.color${i}`).css('border' , 'none')
+                    }
+                    $(`.color${num}`).css('border', '3px solid blue')
+                }
 
             </script>
             <script>
                 function clickFunction(){
-                    const pageNum = sessionStorage.getItem('pageNum')
-                    console.log(pageNum)
-                    if(pageNum == 1){
-                        location.href ='/makeContents3_1'
+
+                    if(sessionStorage.getItem('selectedColor') == null){
+                        alert('❌색상을 선택해 주세요❌')
+                    }else{
+
+                        const pageNum = sessionStorage.getItem('pageNum')
+                        
+                        if(pageNum == 1){
+                            location.href ='/makeContents3_1'
+                        }
+                        else if(pageNum == 2){
+                            location.href = '/makeContents3_2'
+                        }
+                        else{
+                            location.href = '/makeContents3_3'
+                        }
                     }
-                    else if(pageNum == 2){
-                        location.href = '/makeContents3_2'
-                    }
-                    else{
-                        location.href = '/makeContents3_3'
-                    }
+                    
                 }
 
             </script>

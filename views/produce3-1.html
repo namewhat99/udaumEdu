@@ -316,7 +316,9 @@
             function ansChange(ansIdx){
                 ans = ansIdx;
             }
-            
+            $('.ex1').click(function() {
+                window.open("img/1047.jpg")
+            })
             $('.submitButton').click(function () {
                 // 퀴즈 정보를 다 입력하면 /makeContents3_1 페이지로 post 요청하는 코드입니다
                 $.ajax({

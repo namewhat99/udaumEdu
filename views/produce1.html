@@ -215,16 +215,16 @@
             <li class = option2>
                 <div style="width: 359px;">
                     <img src="img/2.png" srcset="img/2@2x.png 2x,img/2@3x.png 3x" />
-                    <img id="main2_text1" src="img/main2_text1.png" />
+                    <img id="main2_text2" src="img/10072.png" />
                     <br />
-                    N개의 키워드 선택지로 구성된 토너먼트 선택형 콘텐츠입니다. <br />
-                    학습자는 캐릭터를 움직여 키워드를 선택합니다.
+                    문제, 정답, 오답 4개로 구성된 객관식 퀴즈 콘텐츠입니다. <br />
+                    학습자는 캐릭터를 움직여 정답 발판 위로 달려갑니다.
                 </div>
             </li>
             <li class = option3>
-                <div style="width: 359px;">
-                    <img src="img/3.png" srcset="img/3@2x.png 2x,img/3@3x.png 3x"/>
-                    <img id="main2_text1" src="img/main2_text1.png" />
+                <div style="width: 359px; height: 386px" >
+                    <img src="img/3.png" srcset="img/3@2x.png 2x,img/3@3x.png 3x" class = "opt2_img"/>
+                    <img id="main2_text1" src="img/236246.png" />
                     <br />
                     문제, 정답, 힌트 10개로 구성된 스무고개형 콘텐츠입니다. <br />
                     학습자는 공간을 돌아다니며 힌트를 보고 정답을 유추합니다.
@@ -234,11 +234,11 @@
         </ul>
 
         <div class="produce_next" style="text-align: right;">
-            <button type="button" id="back_btn" onclick="location.href='/'">
+            <button type="button" id="back_btn" onclick="location.href='/'" class = opt2_img>
                 <img src="img/back_btn.png" style="margin-top: 0px; width: 119px; height: 48px;" />
             </button>
 
-            <button type="button" id="ok_btn" onclick="location.href='/makeContents2'">
+            <button type="button" id="ok_btn">
                 <img
                     src="img/ok_btn.png"
                     style="margin-top: 0px; margin-right: 290px; width: 119px; height: 48px;"
@@ -254,14 +254,29 @@
             
             $(".option1").click(function () {
                 sessionStorage.setItem('pageNum' , 1)
+                $('li').css("border", "none")
+                $(this).css("border", "3px solid blue")
             })
 
             $(".option2").click(function () {
                 sessionStorage.setItem('pageNum' , 2)
+                $('li').css("border", "none")
+                $(this).css("border", "3px solid blue")
             })
 
             $(".option3").click(function () {
                 sessionStorage.setItem('pageNum' , 3)
+                $('li').css("border", "none")
+                $(this).css("border", "3px solid blue")
+            })
+
+            $('#ok_btn').click(function () {
+                if(sessionStorage.getItem('pageNum') == null){
+                    alert('❌템플릿을 선택해 주세요❌')
+                }else{
+                    location.href= "/makeContents2"
+                }
+
             })
 
         </script>
