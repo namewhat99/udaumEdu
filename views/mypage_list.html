@@ -241,12 +241,12 @@
                 transform: translate3d(-29px, 2px, 0px);
               "
             >
-              <li><a class="dropdown_delete" href="#">삭제하기</a></li>
+              <li><a class="dropdown-item" id ="dropdown_delete" href="#">삭제하기</a></li>
               <li>
-                <a class="dropdown_changeName" href="#">이름 변경하기</a>
+                <a class="dropdown-item" id ="dropdown_changeName" href="#">이름 변경하기</a>
               </li>
               <li>
-                <a class="dropdown_changePassword" href="#"
+                <a class="dropdown-item" class="dropdown_changePassword" href="#"
                   >비밀번호 설정하기</a
                 >
               </li>
@@ -385,6 +385,7 @@
             <br />
             <div class="mypage_contents_date">2022.10.28</div>
           </div>
+          
         </li>
 
         <li>
@@ -901,15 +902,15 @@
     <script>
       $(function () {
         
-        $(".dropdown_delete").click(function () {
+        $("#dropdown_delete").click(function () {
           $(".modal").fadeIn();
         });
 
-        $(".dropdown_changeName").click(function () {
+        $("#dropdown_changeName").click(function () {
           $(".modal").fadeIn();
         });
 
-        $(".modal_confirm").click(function () {
+        $("#modal_confirm").click(function () {
           $.ajax({
             url: "/",
             type: "post",
