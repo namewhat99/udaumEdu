@@ -62,7 +62,7 @@
                     </li>
                     <li class="nav-item2" style="height: 50px;">
                         <a class="nav-link" href="/makeContents1"
-                            style="padding-left: 0px; padding-right: 0px; line-height: 46px;">기타 페이지</a>
+                            style="padding-left: 0px; padding-right: 0px; line-height: 46px;">콘텐츠 제작하기</a>
                         <img class="imgbar" src="./img/bar1.png" style="width: 28px; height: 5px;" />
                     </li>
                 </ul>
@@ -216,7 +216,8 @@
                   url: '/v2/user/me',
                   success: function (response) {
                       console.log(response)
-                      console.log(response.properties.nickname)
+                      sessionStorage.setItem('loginId', response.id)
+                      sessionStorage.setItem('nickName', response.properties.nickname)
                       localStorage.setItem("loggedIn" , true)
                       localStorage.setItem("loginId" , response.id)
                       //카카오 로그인이 성공하면 localStorage에 loggedIn true 남기고 성공하면 로그인 이후 페이지로 넘어간다

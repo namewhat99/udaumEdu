@@ -34,11 +34,9 @@ router.get('/', homeHandler)
 
 router.get('/myPage',  async (req, res) => {
 
-    var localstorage = new LocalStorage('./scratch')
-
     await db.read()
 
-    return res.render('mypage_list.html', {da : db.data[localstorage.getItem('loginId')]})
+    return res.render('mypage_list.html', {da : db.data["2637823050"]})
     
 })
 
@@ -55,11 +53,10 @@ router.get('/myPageTest', myPageTest)
 router.post('/makeContents3_1', async (req , res) => {
     // makeContents3_1 에서 컨텐츠 작성이 끝나면 routers/db.json에 만든 컨텐츠를 저장합니다
 
-    console.log(db.data)
     var a = 0;
-
-    const Id = req.body.id;
-
+    
+    const Id = req.body.id
+    
     await db.read();
 
     _(db.data).forEach(function(n){
@@ -79,7 +76,7 @@ router.post('/makeContents3_1', async (req , res) => {
 router.post('/makeContents3_2', async (req,  res) => {
 
     var a = 0;
-    const Id = req.body.id;
+    const Id = req.body.id
 
     await db.read();
     
@@ -99,8 +96,8 @@ router.post('/makeContents3_2', async (req,  res) => {
 router.post('/makeContents3_3', async(req,  res) => {
 
     var a = 0;
+    const Id = req.body.id
 
-    const Id = req.body.id;
 
     await db.read();
 
