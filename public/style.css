@@ -913,9 +913,9 @@ width: 957px;
     background-color: #f6f6f6;
     margin: auto;
     margin-top: 0;
-  border-radius: 20px;
-     position: relative;
- z-index: 1;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
 
     
 }
@@ -952,8 +952,8 @@ width: 957px;
    text-align: middle;
         text-align: center;
    position: relative;
-  
-    bottom: 8px; z-index: 1;
+    bottom: 8px; 
+    z-index: 1;
       
 }
 
@@ -1035,8 +1035,11 @@ width: 957px;
 
 
 .navbar-nav-dropdown {
-     float:right;
+    float:right;
     list-style: none;
+    position: absolute;
+    left: 160px; top: 10px;
+    z-index: 3001;
      
 }
 
@@ -1183,12 +1186,10 @@ width: 957px;
 
 
 .dropdown_box_notice {
-       float:right;
+    float:right;
     border: 0;
     outline: 0;
     background-color: #fafafa;
-
-
 
 }
 
@@ -1282,6 +1283,10 @@ img.-\31_192 {
   height: 1589.2px;
   padding: 0px 0 0;
   object-fit: contain;
+}
+
+img.-\31_736{
+  border: none
 }
 
 img.-\31_271 {
@@ -1502,6 +1507,7 @@ img.-\31_402 {
   top: 0;
   left: 0;
   display: none;
+  z-index: 4000;
 }
 
 .modal_content{

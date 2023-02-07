@@ -22,33 +22,7 @@
 
 <body style="background-color: #fafafa;">
     <!-- 알림 드롭바-->
-    <div class="dropdown_box_notice" id="navbarNavDropdown">
-        <ul class="navbar-nav-dropdown" style="top: 390px;">
-            <li class="nav-item-dropdown">
-                <a class="nav-link" href="dropdown-menu" src="img/notice.png" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <img src="img/notice.png" style="
-                                width: 27.3px;
-                                height: 36.8px;
-                                z-index: 4000;
-                                right: 270px;
-                                top: 35px;
-                                position: absolute;
-                            " />
-                </a>
-                <!--show면, 
-               <ul class="dropdown-menu show" data-popper-reference-hidden="" data-popper-placement="bottom-end" style="position: absolute; inset: 80px 0px auto auto; margin: 0px; transform: translate3d(-32px, 2px, 0px);">
--->
-                <div class="dropdown-menu-position">
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="main.html">공지사항</a></li>
-                        <li><a class="dropdown-item" href="#">유디터 사용설명서</a></li>
-                        <li><a class="dropdown-item" href="#">문의처</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
+
 
     <nav class="navbar navbar-expand-lg nav-distance" style="background-color: #fafafa; padding-bottom: 25px;">
         <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
@@ -87,7 +61,7 @@
                         <img class="imgbar" src="./img/bar1.png" style="width: 28px; height: 5px;" />
                     </li>
                     <li class="nav-item2" style="height: 50px;">
-                        <a class="nav-link" href="/"
+                        <a class="nav-link" href="/makeContents1"
                             style="padding-left: 0px; padding-right: 0px; line-height: 46px;">기타 페이지</a>
                         <img class="imgbar" src="./img/bar1.png" style="width: 28px; height: 5px;" />
                     </li>
@@ -227,7 +201,10 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
-
+        
+        if(localStorage.getItem('loginId') != '-'){
+            location.href = '/afterLogin'
+        }
         document.cookie = "safeCookie1=foo; SameSite=Lax"; 
         document.cookie = "safeCookie2=foo";  
         document.cookie = "crossCookie=bar; SameSite=None; Secure";
@@ -242,6 +219,7 @@
                   url: '/v2/user/me',
                   success: function (response) {
                       console.log(response)
+                      console.log(response.properties.nickname)
                       localStorage.setItem("loggedIn" , true)
                       localStorage.setItem("loginId" , response.id)
                       //카카오 로그인이 성공하면 localStorage에 loggedIn true 남기고 성공하면 로그인 이후 페이지로 넘어간다
@@ -254,7 +232,9 @@
                         type: 'post',
                         data: {
                             id: response.id,
-                            isLoggedin: true
+                            isLoggedin: true,
+                            nickName: response.properties.nickname
+
                         }
                       })
                   },

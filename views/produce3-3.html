@@ -29,42 +29,7 @@
 
     <body style="background-color: #fafafa;">
         <!-- 알림 드롭바-->
-        <div class="dropdown_box_notice" id="navbarNavDropdown">
-            <ul class="navbar-nav-dropdown" style="top: 390px;">
-                <li class="nav-item-dropdown">
-                    <a
-                        class="nav-link"
-                        href="dropdown-menu"
-                        src="img/notice.png"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <img
-                            src="img/notice.png"
-                            style="
-                                width: 27.3px;
-                                height: 36.8px;
-                                z-index: 4000;
-                                right: 180px;
-                                top: 35px;
-                                position: absolute;
-                            "
-                        />
-                    </a>
-                    <!--show면, 
-               <ul class="dropdown-menu show" data-popper-reference-hidden="" data-popper-placement="bottom-end" style="position: absolute; inset: 80px 0px auto auto; margin: 0px; transform: translate3d(-32px, 2px, 0px);">
--->
-                    <div class="dropdown-menu-position">
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="main.html">공지사항</a></li>
-                            <li><a class="dropdown-item" href="#">유디터 사용설명서</a></li>
-                            <li><a class="dropdown-item" href="#">문의처</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        
 
         <nav
             class="navbar navbar-expand-lg nav-distance"
@@ -218,9 +183,11 @@
                     <input
                         type="text"
                         placeholder="스무고개 정답을 입력하세요 (공백 포함 20자 이내)"
+                        id="ans"
+                        onchange="changeAns()"
                     />
                 </div>
-                <img class="ex1" src="img/ex1.png" />
+                <img class="ex1" src="img/ex1.png" onclick = "window.open('img/1040.png','수수깨끼형','width=430,height=500')"/>
                 <br />
 
                 <img class="produce3_3_intro" src="img/produce3_3_intro.png" />
@@ -237,6 +204,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option1"
+                            onchange = "changeHint(0)"
                         />
                     </div>
                     
@@ -248,6 +217,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option2"
+                            onchange = "changeHint(1)"
                         />
                     </div>
                     
@@ -259,6 +230,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option3"
+                            onchange = "changeHint(2)"
                         />
                     </div>
                     
@@ -270,6 +243,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option4"
+                            onchange = "changeHint(3)"
                         />
                     </div>
                     
@@ -281,6 +256,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option5"
+                            onchange = "changeHint(4)"
                         />
                     </div>
                     
@@ -292,6 +269,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option6"
+                            onchange = "changeHint(5)"
                         />
                     </div>
                     
@@ -303,6 +282,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option7"
+                            onchange = "changeHint(6)"
                         />
                     </div>
                     
@@ -314,6 +295,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option8"
+                            onchange = "changeHint(7)"
                         />
                     </div>
                     
@@ -325,6 +308,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option9"
+                            onchange = "changeHint(8)"
                         />
                     </div>
                     
@@ -337,6 +322,8 @@
                             type="text"
                             placeholder="힌트를 입력하세요"
                             style="border: none; vertical-align: bottom;"
+                            id = "option10"
+                            onchange = "changeHint(9)"
                         />
                     </div>
                     
@@ -352,16 +339,71 @@
         <!--이전/다음 버튼-->
 
         <div class="produce_next" style="text-align: right;">
-            <button type="button" id="back_btn" onclick="location.href='produce3-2.html'">
+            <button type="button" id="back_btn" onclick="location.href='/makeContents2'">
                 <img src="img/back_btn.png" style="margin-top: 0px; width: 119px; height: 48px;" />
             </button>
 
-            <button type="button" id="ok_btn" onclick="location.href='mypage_list.html'">
+            <button type="button" id="ok_btn">
                 <img
                     src="img/ok_btn.png"
                     style="margin-top: 0px; margin-right: 290px; width: 119px; height: 48px;"
                 />
             </button>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script>
+            var answer = '-'
+            var hint = []
+            localStorage.setItem('quizAns' , '-')
+
+            for(i = 0; i < 10; i++){
+                hint.push('-')
+                localStorage.setItem(`Hint_${i}` , '-')
+            } 
+
+            function changeAns(){
+                answer = document.getElementById('ans').value
+                localStorage.setItem('quizAns' , answer)
+            }
+
+            function changeHint(hintIdx){
+                hint[`${hintIdx}`] = document.getElementById(`option${hintIdx + 1}`).value
+                localStorage.setItem(`Hint_${hintIdx}` , hint[`${hintIdx}`])
+            }
+
+            function checkContents(){
+                if(localStorage.getItem('quizAns') == '-') return false
+                for(j = 0; j < 10; j++){
+                    if (localStorage.getItem(`Hint_${j}`) == '-') return false
+                }
+
+                return true
+            }
+
+            $('#ok_btn').click(function () {
+                // 퀴즈 정보를 다 입력하면 /makeContents3_1 페이지로 post 요청하는 코드입니다
+                if(checkContents() == false){
+                    alert('❌컨텐츠를 입력해주세요!❌')
+                }
+                else{
+                    $.ajax({
+                        url: '/makeContents3_3',
+                        type: 'post',
+                        data: {
+                            id: localStorage.getItem("loginId"),
+                            ansVal: `${answer}`,
+                            hintArr: `${hint}`,
+                            contentsType: 3
+                        },
+                        dataType: 'JSON'
+                    
+                        })
+                        alert('😀컨텐츠 저장이 완료되었습니다')
+                        location.href = '/'
+                    }
+                }
+            )
+        </script>
     </body>
 </html>

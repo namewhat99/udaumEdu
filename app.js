@@ -15,7 +15,7 @@ const FileStore = filestore(session)
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 app.use(express.static(path.join(__dirname, 'public')))
-// db.json 을 위해 쓰는 코드입니다 , (lowdb 사용했습니다!)
+
 app.use(
     session({
         secret: 'keyboard cat', 

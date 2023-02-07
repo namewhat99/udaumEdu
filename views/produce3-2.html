@@ -28,42 +28,7 @@
 
     <body style="background-color: #fafafa;">
         <!-- 알림 드롭바-->
-        <div class="dropdown_box_notice" id="navbarNavDropdown">
-            <ul class="navbar-nav-dropdown" style="top: 390px;">
-                <li class="nav-item-dropdown">
-                    <a
-                        class="nav-link"
-                        href="dropdown-menu"
-                        src="img/notice.png"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <img
-                            src="img/notice.png"
-                            style="
-                                width: 27.3px;
-                                height: 36.8px;
-                                z-index: 4000;
-                                right: 180px;
-                                top: 35px;
-                                position: absolute;
-                            "
-                        />
-                    </a>
-                    <!--show면, 
-               <ul class="dropdown-menu show" data-popper-reference-hidden="" data-popper-placement="bottom-end" style="position: absolute; inset: 80px 0px auto auto; margin: 0px; transform: translate3d(-32px, 2px, 0px);">
--->
-                    <div class="dropdown-menu-position">
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="main.html">공지사항</a></li>
-                            <li><a class="dropdown-item" href="#">유디터 사용설명서</a></li>
-                            <li><a class="dropdown-item" href="#">문의처</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
+       
 
         <nav
             class="navbar navbar-expand-lg nav-distance"
@@ -213,9 +178,9 @@
 
           <div class="problem_contents2">
                 <div class="search2">
-                    <input type="text" placeholder="1번 문제를 입력하세요(공백 포함 100자 이내)" />
+                    <input type="text" placeholder="1번 문제를 입력하세요(공백 포함 100자 이내)" id = "quiz" onchange = "quizChange()"/>
                 </div>
-                <img class="ex1" src="img/ex1.png" />
+                <img class="ex1" src="img/ex1.png" onclick = "window.open('img/1039.png','오지선다형','width=430,height=500')"/>
                 <br>
                 
                 
@@ -230,24 +195,24 @@
            
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example0" onchange = "exampleChange(0)"/>
                         
                     </div>
                 </li>
                 <li>
                    <div>
-                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example1" onchange = "exampleChange(1)"/>
                    </div>
                 </li>
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example2" onchange = "exampleChange(2)"/>
                     </div>
                 </li>
 
                 <li>
                      <div>
-                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example3" onchange = "exampleChange(3)"/>
                      </div>
                 </li>
 
@@ -260,24 +225,24 @@
            
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example4" onchange = "exampleChange(4)"/>
                         
                     </div>
                 </li>
                 <li>
                    <div>
-                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example5" onchange = "exampleChange(5)"/>
                    </div>
                 </li>
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example6" onchange = "exampleChange(6)"/>
                     </div>
                 </li>
 
                 <li>
                      <div>
-                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example7" onchange = "exampleChange(7)"/>
                      </div>
                 </li>
 
@@ -288,24 +253,24 @@
            
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example8" onchange = "exampleChange(8)"/>
                         
                     </div>
                 </li>
                 <li>
                    <div>
-                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example9" onchange = "exampleChange(9)"/>
                    </div>
                 </li>
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example10" onchange = "exampleChange(10)"/>
                     </div>
                 </li>
 
                 <li>
                      <div>
-                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example11" onchange = "exampleChange(11)"/>
                      </div>
                 </li>
 
@@ -316,43 +281,28 @@
            
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example12" onchange = "exampleChange(12)"/>
                         
                     </div>
                 </li>
                 <li>
                    <div>
-                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                       <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example13" onchange = "exampleChange(13)"/>
                    </div>
                 </li>
                 <li>
                     <div>
-                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                        <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example14" onchange = "exampleChange(14)"/>
                     </div>
                 </li>
-
                 <li>
                      <div>
-                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;"/>
+                         <input type="text" placeholder="보기를 입력하세요" style="    border:none; vertical-align: bottom;" id = "example15" onchange = "exampleChange(15)"/>
                      </div>
                 </li>
 
                 </ul>
  
-              
-              
-              
-              
-              
-              
-              
-              
-              
-                
-                
-                
-                
-                
                 
             </div>
         </div>
@@ -372,7 +322,7 @@
                     />
                 </button>
                 
-                 <button type="button" id="ok_btn" onclick= clickFunction()>
+                 <button type="button" id="ok_btn" class = "submitBtn">
                     <img
                         src="img/ok_btn.png"
                         style="margin-top: 0px; margin-right: 290px;width: 119px; height: 48px;"
@@ -380,21 +330,63 @@
                 </button>
                 
             </div>
-        
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
         <script>
-            function clickFunction(){
-                const pageNum = sessionStorage.getItem('pageNum')
-                console.log(pageNum)
-                if(pageNum == 1){
-                    href.location ='/'
+
+            var quizValue = '-'
+            var example = []
+
+            localStorage.setItem('quizValue' , '-')
+
+            for(i = 0; i < 16; i++){
+                example.push('-')
+                localStorage.setItem(`Example2_${i}` , '-')
+            } 
+
+
+            function quizChange(){
+                quizValue = document.getElementById("quiz").value
+                localStorage.setItem(`quizName` , quizValue)
+                console.log(quizValue)
+            }
+
+            function exampleChange(exampleIdx){
+                example[`${exampleIdx}`] = document.getElementById(`example${exampleIdx}`).value
+                localStorage.setItem(`Example2_${exampleIdx}` , example[`${exampleIdx}`])
+            }
+
+            function checkContents(){
+                if(localStorage.getItem('quizName') == '-') return false
+                for(j = 0; j < 16; j++){
+                    if (localStorage.getItem(`Example2_${j}`) == '-') return false
                 }
-                else if(pageNum == 2){
-                    href.location = '/myPage'
+
+                return true
+            }
+
+            $('.submitBtn').click(function () {
+                // 퀴즈 정보를 다 입력하면 /makeContents3_1 페이지로 post 요청하는 코드입니다
+                if(checkContents() == false){
+                    alert('❌컨텐츠를 입력해주세요!❌')
                 }
                 else{
-                    href.location = '/makeContents1'
+                    $.ajax({
+                        url: '/makeContents3_2',
+                        type: 'post',
+                        data: {
+                            id: localStorage.getItem("loginId"),
+                            quizVal: `${quizValue}`,
+                            example: `${example}`,
+                            contentsType: 2
+                        },
+                        dataType: 'JSON'
+                    
+                        })
+                        alert('😀컨텐츠 저장이 완료되었습니다')
+                        location.href = '/'
+                    }
                 }
-            }
+            )
         </script>
         
         
