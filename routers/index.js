@@ -8,6 +8,7 @@ import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
 import filestore from "session-file-store"
 import _ from 'lodash'
+import {LocalStorage} from "node-localstorage"
 
 const router = express.Router()
 const __dirname = path.resolve()
@@ -33,9 +34,11 @@ router.get('/', homeHandler)
 
 router.get('/myPage',  async (req, res) => {
 
+    var localstorage = new LocalStorage('./scratch')
+
     await db.read()
 
-    return res.render('mypage_list.html', {da : db.data["6132342323"]})
+    return res.render('mypage_list.html', {da : db.data[localstorage.getItem('loginId')]})
     
 })
 
@@ -76,7 +79,6 @@ router.post('/makeContents3_1', async (req , res) => {
 router.post('/makeContents3_2', async (req,  res) => {
 
     var a = 0;
-
     const Id = req.body.id;
 
     await db.read();

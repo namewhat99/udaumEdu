@@ -202,9 +202,6 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
         
-        if(localStorage.getItem('loginId') != '-'){
-            location.href = '/afterLogin'
-        }
         document.cookie = "safeCookie1=foo; SameSite=Lax"; 
         document.cookie = "safeCookie2=foo";  
         document.cookie = "crossCookie=bar; SameSite=None; Secure";
