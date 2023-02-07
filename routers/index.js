@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
 import filestore from "session-file-store"
+import _ from 'lodash'
 
 const router = express.Router()
 const __dirname = path.resolve()
@@ -30,11 +31,11 @@ app.use(
 
 router.get('/', homeHandler)
 
-router.get('/myPage',  async (req, res, next) => {
+router.get('/myPage',  async (req, res) => {
 
     await db.read()
-    console.log(db.data["2637823050"])
-    return res.render('mypage_list.html', {da : db.data["2637823050"]})
+
+    return res.render('mypage_list.html', {da : db.data["6132342323"]})
     
 })
 
@@ -51,12 +52,19 @@ router.get('/myPageTest', myPageTest)
 router.post('/makeContents3_1', async (req , res) => {
     // makeContents3_1 에서 컨텐츠 작성이 끝나면 routers/db.json에 만든 컨텐츠를 저장합니다
 
-    console.log(req.body)
-    
+    console.log(db.data)
+    var a = 0;
+
     const Id = req.body.id;
 
     await db.read();
-     
+
+    _(db.data).forEach(function(n){
+        a += _.size(n)
+    })
+    
+    req.body.count = a + 1
+
     if(!db.data[Id]) db.data[Id] = [];
     
     db.data[Id].push(req.body)
@@ -67,12 +75,18 @@ router.post('/makeContents3_1', async (req , res) => {
 
 router.post('/makeContents3_2', async (req,  res) => {
 
-    console.log(req.body)
-    
+    var a = 0;
+
     const Id = req.body.id;
 
     await db.read();
-     
+    
+    _(db.data).forEach(function(n){
+        a += _.size(n)
+    })
+
+    req.body.count = a + 1
+
     if(!db.data[Id]) db.data[Id] = [];
     
     db.data[Id].push(req.body)
@@ -82,11 +96,15 @@ router.post('/makeContents3_2', async (req,  res) => {
 
 router.post('/makeContents3_3', async(req,  res) => {
 
-    console.log(req.body)
-    
+    var a = 0;
+
     const Id = req.body.id;
 
     await db.read();
+
+    _(db.data).forEach(function(n){
+        a += _.size(n)
+    })
      
     if(!db.data[Id]) db.data[Id] = [];
     

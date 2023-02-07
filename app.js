@@ -8,7 +8,7 @@ import filestore from "session-file-store"
 
 
 const app = express()
-const port = 3003;
+const port = 80;
 const __dirname = path.resolve()
 const FileStore = filestore(session)
 
