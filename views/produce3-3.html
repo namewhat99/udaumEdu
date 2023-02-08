@@ -356,7 +356,7 @@
             var answer = '-'
             var hint = []
             localStorage.setItem('quizAns' , '-')
-
+            //앞의 페이지들과 동일하게 quizAns , Hint 들을 로컬스토리지에 '-' 로 저장
             for(i = 0; i < 10; i++){
                 hint.push('-')
                 localStorage.setItem(`Hint_${i}` , '-')
@@ -366,18 +366,18 @@
                 answer = document.getElementById('ans').value
                 localStorage.setItem('quizAns' , answer)
             }
-
+            // ans가 값이 입력되면 로컬스토리지 값을 바꾼다
             function changeHint(hintIdx){
                 hint[`${hintIdx}`] = document.getElementById(`option${hintIdx + 1}`).value
                 localStorage.setItem(`Hint_${hintIdx}` , hint[`${hintIdx}`])
             }
-
+            // hint 의 값도 동일
             function checkContents(){
                 if(localStorage.getItem('quizAns') == '-') return false
                 for(j = 0; j < 10; j++){
                     if (localStorage.getItem(`Hint_${j}`) == '-') return false
                 }
-
+                // 앞과 동일하게 입력이 완료되지 않으면 false 를 반환하는 함수
                 return true
             }
 
@@ -385,6 +385,8 @@
                 // 퀴즈 정보를 다 입력하면 /makeContents3_1 페이지로 post 요청하는 코드입니다
                 if(checkContents() == false){
                     alert('❌컨텐츠를 입력해주세요!❌')
+                    //콘텐츠 입력이 완료되지 않으면 false 가 반환되어 alert
+                    // 이 외에는 post 요청
                 }
                 else{
                     $.ajax({

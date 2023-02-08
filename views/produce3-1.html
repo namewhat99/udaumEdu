@@ -269,7 +269,7 @@
             var quizValue, quizCommentaryValue
             var exp = ['-', '-', '-', '-', '-']
             var ans = 0;
-
+            // 로컬스토리지에 quizName , quizCommentary , example들을 '-'로 초기화 , ans는 오지선다 중 정답
             localStorage.setItem('quizName' , '-')
             localStorage.setItem('quizCommentary' , '-')
             localStorage.setItem('example0' , '-')
@@ -281,23 +281,28 @@
             function quizChange(){
                 quizValue = document.getElementById("quiz").value
                 localStorage.setItem(`quizName` , quizValue)
+                // 퀴즈값을 입력하면 로컬스토리지에 quizName의 value 값을 바꾼다
                 console.log(quizValue)
             }
             
             function quizCommentaryChange(){
                 quizCommentaryValue = document.getElementById("quizCommentary").value
                 localStorage.setItem(`quizCommentary` , quizCommentaryValue)
+                // 퀴즈값을 입력하면 로컬스토리지에 quizCommentary의 value 값을 바꾼다
                 console.log(quizCommentaryValue)
             }
             function exampleChange(exampleIdx){
                 exp[`${exampleIdx}`] = document.getElementById(`example${exampleIdx}`).value
+                // 보기를 입력하면 로컬스토리지에 example의 value 값을 바꾼다
                 localStorage.setItem(`example${exampleIdx}` , exp[`${exampleIdx}`])
             }
             function ansChange(ansIdx){
+                // 정답이 몇번째인지 바꾸는 함수
                 ans = ansIdx;
             }
-            function checkContents(){
 
+            function checkContents(){
+                //로컬에 저장된 값이 '-' 인 경우, 입력이 이뤄지지 않은 경우이다, 입력이 완료되었나를 알아보기 위한 함수
                 if(localStorage.getItem('quizName') == '-') return false
                 else if(localStorage.getItem('quizCommentary') == '-') return false
                 else if(localStorage.getItem('example0') == '-') return false
@@ -314,7 +319,9 @@
                 // 퀴즈 정보를 다 입력하면 /makeContents3_1 페이지로 post 요청하는 코드입니다
                 if(checkContents() == false){
                     alert('❌컨텐츠를 입력해주세요!❌')
+                    //checkContents()가 false 이면 콘텐츠 입력이 완료되지 않은 경우이다.
                 }
+                // 그 외에는 post 요청 , 메인페이지로 이동
                 else{
                     $.ajax({
                         url: '/makeContents3_1',

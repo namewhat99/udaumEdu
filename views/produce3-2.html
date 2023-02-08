@@ -337,7 +337,7 @@
             var example = []
 
             localStorage.setItem('quizValue' , '-')
-
+            // 앞의 페이지와 비슷하게 localStorage에 '-' 로 값들을 초기화한다.
             for(i = 0; i < 16; i++){
                 example.push('-')
                 localStorage.setItem(`Example2_${i}` , '-')
@@ -347,12 +347,14 @@
             function quizChange(){
                 quizValue = document.getElementById("quiz").value
                 localStorage.setItem(`quizName` , quizValue)
+                //"quiz"가 입력되면 로컬스토리지의 값 변경
                 console.log(quizValue)
             }
 
             function exampleChange(exampleIdx){
                 example[`${exampleIdx}`] = document.getElementById(`example${exampleIdx}`).value
                 localStorage.setItem(`Example2_${exampleIdx}` , example[`${exampleIdx}`])
+                // 보기가 입력되면 로컬스토리지 값 변경
             }
 
             function checkContents(){
@@ -360,15 +362,17 @@
                 for(j = 0; j < 16; j++){
                     if (localStorage.getItem(`Example2_${j}`) == '-') return false
                 }
-
+                // 앞의 페이지와 동일하게 콘텐츠가 입력 되었는지 체크하는 함수
                 return true
             }
 
             $('.submitBtn').click(function () {
-                // 퀴즈 정보를 다 입력하면 /makeContents3_1 페이지로 post 요청하는 코드입니다
+                // 퀴즈 정보를 다 입력하면 /makeContents3_2 페이지로 post 요청하는 코드입니다
                 if(checkContents() == false){
                     alert('❌컨텐츠를 입력해주세요!❌')
                 }
+                // 콘텐츠 입력이 완료되지 않았으면 false
+                // 완료되었으면 post 요청을 보낸다.
                 else{
                     $.ajax({
                         url: '/makeContents3_2',
