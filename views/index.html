@@ -82,7 +82,7 @@
         <div>
             <img src="./img/1203.png" srcset="img/1203@2x.png 2x, img/1203@3x.png 3x" class="main_1_explain">
         </div>
-        <button type="button" onclick= "location.href= '/makeContents1'" class= "contents_button">
+        <button type="button" onclick= "alert(`❌로그인 후 이용해주세요❌`)" class= "contents_button">
             <img src="./img/u.png" srcset="img/u@2x.png 2x, img/u@3x.png 3x" class="main_1_button">
         </button>
     
@@ -202,10 +202,7 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
 
-        if(localStorage.getItem('loginId') != undefined){
-            location.href = "/afterLogin"
-        }
-
+        
         document.cookie = "safeCookie1=foo; SameSite=Lax"; 
         document.cookie = "safeCookie2=foo";  
         document.cookie = "crossCookie=bar; SameSite=None; Secure";
