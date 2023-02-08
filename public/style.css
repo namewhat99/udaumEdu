@@ -909,11 +909,10 @@ width: 957px;
     text-align: top;
     width: 275px;
     height: 274px;
-    border-radius: 30px;
     background-color: #f6f6f6;
     margin: auto;
     margin-top: 0;
-    border-radius: 20px;
+    border-radius : 20px 20px 0 0;
     position: relative;
     z-index: 1;
 
