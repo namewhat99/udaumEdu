@@ -106,7 +106,7 @@
           <button
             type="button"
             id="profile_btn"
-            onclick="#"
+            onclick=""
             style="padding-left: 31px"
           >
             <img src="img/profile.png" style="width: 37px; height: 37px" />
@@ -449,7 +449,6 @@ s
         <div class="modal_content">
           <img src="img/1110.png" srcset="img/1110@2x.png 2x, img/1110@3x.png 3x" class="-\31 110">
             <input type= 'text' class= 'modal_input'>
-          </form>
           <form>
             <input type= 'image' src="img/981.png" srcset="img/981@2x.png 2x, img/981@3x.png 3x" class="modal_confirm">
           </form>
@@ -466,19 +465,25 @@ s
     ></script>
     <script>
 
-      $(function(){
-        $.ajax({
-          url: '/myPage',
-          type: 'GET',
-          success: function(data){
-            console.log(data)
-          },
-          error : function(){
-            alert('error')
-          }
-
+        fetch("/api/myPage").then(res => res.json()).then(data => {
+            console.log(data);
+        }).catch(e => {
+            console.error(e);
         })
-      })
+
+    //   $(function(){
+    //     $.ajax({
+    //       url: '/myPage',
+    //       type: 'GET',
+    //       success: function(data){
+    //         console.log(data)
+    //       },
+    //       error : function(){
+    //         alert('error')
+    //       }
+
+    //     })
+    //   })
 
       $(function () {
         
