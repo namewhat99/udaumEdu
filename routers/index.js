@@ -22,7 +22,7 @@ const FileStore = filestore(session)
 app.use(express.static(path.join(__dirname , './public')))
 app.use(
     session({
-        secret: 'keyboard cat', 
+        secret: '!Aa3df$%kald', 
         resave: false,
         saveUninitialized: true,
         store : new FileStore()
@@ -38,7 +38,11 @@ router.get('/myPage',  async (req, res) => {
     // 현재 서버에서 로그인 한 아이디별로 db를 불러오는 방법을 찾는중입니다. "2637823050"는 임의의 값 입니다"
     return res.render('mypage_list.html', {da : db.data["2637823050"]})
     
-})
+});
+
+router.get("/api/contents", async (req, res) => {
+
+});
 
 router.get('/afterLogin', loginHandler)
 //로그인 이후 화면 , "~Handler들은 전부 페이지 렌더링"
@@ -52,7 +56,6 @@ router.get('/makeContents3_2', contentsHandler3_2)
 // "/makeContents1 에서 수수께끼를 선택했을때 넘어가는 페이지"
 router.get('/makeContents3_3', contentsHandler3_3)
 // "/makeContents1 에서 스무고개를 선택했을때 넘어가는 페이지"
-
 
 router.post('/makeContents3_1', async (req , res) => {
     // 오지선다 콘텐츠 입력 후 post 요청 , db에 저장
