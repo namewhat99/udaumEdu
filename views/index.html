@@ -201,7 +201,11 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>
-        
+
+        if(localStorage.getItem('loginId') != undefined){
+            location.href = "/afterLogin"
+        }
+
         document.cookie = "safeCookie1=foo; SameSite=Lax"; 
         document.cookie = "safeCookie2=foo";  
         document.cookie = "crossCookie=bar; SameSite=None; Secure";
@@ -260,7 +264,9 @@
               })
               Kakao.Auth.setAccessToken(undefined)
             }
-          }  
+          } 
+        
+       
         </script>
 
 </body>
