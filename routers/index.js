@@ -36,7 +36,7 @@ router.get('/myPage',  async (req, res) => {
     // 마이페이지로 이동하면 아이디에 따라 db를 읽고 그 데이터들을 가져옵니다
     await db.read()
     // 현재 서버에서 로그인 한 아이디별로 db를 불러오는 방법을 찾는중입니다. "2637823050"는 임의의 값 입니다"
-    return res.render('mypage_list.html');
+    return res.render('mypage_list.html', { da: db.data["2637823050"] });
 });
 
 router.get("/api/myPage", async (req, res) => {
