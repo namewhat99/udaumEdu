@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(
     session({
-        secret: 'keyboard cat', 
+        secret: '!Aa3df$%kald', 
         resave: false,
         saveUninitialized: true,
         store : new FileStore()
