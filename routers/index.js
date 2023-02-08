@@ -41,7 +41,9 @@ router.get('/myPage',  async (req, res) => {
 });
 
 router.get("/api/contents", async (req, res) => {
-
+    let kl = Object.keys(db.data);
+    
+    
 });
 
 router.get('/afterLogin', loginHandler)
