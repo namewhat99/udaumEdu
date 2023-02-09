@@ -228,7 +228,12 @@
 
     <script>
 
-        fetch("/api/myPage").then(res => res.json()).then(data => {
+        fetch("/api/myPage", {
+            method: "GET",
+            headers: {
+                id: localStorage.getItem("loginId")
+            }
+        }).then(res => res.json()).then(data => {
 
             var html = document.querySelector('#template-list-item').innerHTML;
             var resultHTML = `<ul
