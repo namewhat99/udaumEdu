@@ -30,7 +30,7 @@ dotenv.config()
 app.set('view engine', 'ejs');
 app.engine('html', ejs.renderFile);
 
-app.use('/', routes)
+app.use('/', routes);
 
 app.listen(port , () => {
     console.log(`App listening on port ${port}`)

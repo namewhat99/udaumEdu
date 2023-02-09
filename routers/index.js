@@ -46,7 +46,16 @@ router.get("/api/myPage", async (req, res) => {
 
 router.get("/api/contents", async (req, res) => {
     let kl = Object.keys(db.data);
+    let list = [];
     
+    for(let key of kl) {
+        if (list.length > 20) break;
+        db.data[kl].foreach(e => {
+            if (e.contentsType == "1") list.push(e);
+        });
+    }
+
+    res.json(list);
 });
 
 router.get('/afterLogin', loginHandler)
