@@ -56,7 +56,7 @@ router.get("/api/contents", async (req, res) => {
         for (let key of kl) {
             if (list.length > 20) break;
             db.data[key].forEach((e) => {
-                if (e.contentsType == "2") list.push(e);
+                if (e.contentsType == "3") list.push(e);
             });
         }
 
@@ -131,6 +131,9 @@ router.post("/makeContents3_3", async (req, res) => {
     _(db.data).forEach(function (n) {
         a += _.size(n);
     });
+
+    req.body.count = a + 1;
+    
     // 지금 제작된 콘텐츠가 몇번째 콘텐츠인지 req.body 에 저장
     if (!db.data[Id]) db.data[Id] = [];
 
