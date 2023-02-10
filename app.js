@@ -33,5 +33,5 @@ app.engine('html', ejs.renderFile);
 app.use('/', routes);
 
 app.listen(port , () => {
-    console.log(`App listening on port ${port}`)
-})
+    console.log(`App listening on port ${port}`);
+});
