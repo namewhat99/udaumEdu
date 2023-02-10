@@ -43,7 +43,7 @@ router.get("/myPage", async (req, res) => {
 router.get("/api/myPage", async (req, res) => {
     await db.read();
 
-    res.json(db.data["2637823050"]);
+    res.json(db.data[req.headers.id]);
 });
 
 router.get("/api/contents", async (req, res) => {
