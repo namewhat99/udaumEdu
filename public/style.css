@@ -1359,12 +1359,13 @@ padding-left: 104px; padding-top: 73px; */
   position: relative;
   background-color: white;
   height: 1871px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .main_1_button{
   position: absolute;
   left:340px; top:390px;
+  z-index: 1;
 }
 
 .main_1_explain{
@@ -1541,11 +1542,12 @@ img.-\31_402 {
 .modal_cancel{
   position: absolute;
   left: 155px;
-  top: 250px
+  top: 250px;
 }
 .contents_button{
   background-color: white;
-  border: none
+  border: none;
+  z-index: 10;
 }
 .download_button{
   border: none

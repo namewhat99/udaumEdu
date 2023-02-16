@@ -234,7 +234,7 @@
                 id: localStorage.getItem("loginId")
             }
         }).then(res => res.json()).then(data => {
-
+            console.log(data)
             var html = document.querySelector('#template-list-item').innerHTML;
             var resultHTML = `<ul
             class="mypage_main_line"
@@ -269,7 +269,7 @@
             </li>`
 
             for(i = 0; i < data.length; i++){
-              console.log(data.length)
+              
               if(i == 4 || i == 9){
                 resultHTML += `<ul
                 class="mypage_main_line"
