@@ -1352,7 +1352,7 @@ img._U-_1 {
 .main_1{
   /* 
 padding-left: 104px; padding-top: 73px; */
-  width: auto;
+  width: 100%;
   margin-top: 87px;
   object-fit: contain; 
   margin: auto;
@@ -1453,7 +1453,7 @@ img.-\31_402 {
 .main_5_letter{
   position: absolute;
   left: 417.4px;
-  top: 124.4px;
+  top: 140.7px;
 }
 
 .main_5_imageContainer{
@@ -1618,6 +1618,7 @@ img.-\31_192 {
 .main_pb_bg{
   position: absolute;
   top: 740px;
+  left: 1px;
   z-index: 0;
 }
 
