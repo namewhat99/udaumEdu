@@ -1298,7 +1298,7 @@ img.-\31_271 {
 .main_3 {
   position : relative;
   height : 1275.8px;
-  
+  background-color: white;
 }
 
 .main_3 > img {
@@ -1358,7 +1358,8 @@ padding-left: 104px; padding-top: 73px; */
   margin: auto;
   position: relative;
   background-color: white;
-
+  height: 1871px;
+  z-index: -1;
 }
 
 .main_1_button{
@@ -1374,6 +1375,7 @@ padding-left: 104px; padding-top: 73px; */
 
 .main_2 {
   position : relative;
+  background-color: white;
 }
 
 .main_2 > button{
@@ -1410,7 +1412,8 @@ img.-\31_277 {
 
 .main_4{
   position: relative;
-  height: 1185.6px
+  height: 1185.6px;
+  background-color: white;
 }
 
 .main_4 > img{
@@ -1437,7 +1440,8 @@ img.-\31_402 {
 
 .main_5{
   position: relative;
-  height: 3400px
+  height: 3400px;
+  background-color: white;
 }
 
 .main_5_logoContainer{
@@ -1560,3 +1564,131 @@ img.-\31_402 {
   margin-top:25px;
 }
 
+img.-\31_192 {
+  width: 1920px;
+  height: 941px;
+  padding: 17px 0 0;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.main_dot{
+  position: absolute;
+  left: 785px;
+  top: 1300px;
+}
+
+.main_sol{
+  position: absolute;
+  left: 1020px;
+  top: 1220px;
+}
+
+.main_exp1{
+  position: absolute;
+  left: 570px;
+  top: 1520px;
+  z-index: 0;
+}
+
+.main_exp2{
+  position: absolute;
+  left: 1130px;
+  top: 1520px;
+}
+
+.main_pb1{
+  position: absolute;
+  top: 850px;
+  left: 323px;
+}
+
+.main_pb2{
+  position: absolute;
+  top: 850px;
+  left: 818px;
+}
+
+.main_pb3{
+  position: absolute;
+  top: 850px;
+  left: 1311px;
+}
+
+.main_pb_bg{
+  position: absolute;
+  top: 740px;
+  z-index: 0;
+}
+
+.main_pb1_let{
+  position: absolute;
+  top: 887px;
+  left: 395px;
+  z-index: 1;
+}
+
+.main_pb2_let{
+  position: absolute;
+  top: 887px;
+  left: 865px;
+  z-index: 1;
+}
+
+.main_pb3_let{
+  position: absolute;
+  top: 887px;
+  left: 1360px;
+  z-index: 1;
+}
+
+.main_pb_background_outer1 {
+  width: 459.9px;
+  height: 269.2px;
+  padding: 0 0 0 0px;
+  opacity: 0.05;
+  z-index: -1;
+  background-color:#303945;
+  position: absolute;
+  top: 1468px;
+  left: 520px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.main_pb_background_inner1 {
+  width: 411.3px;
+  height: 223.3px;
+  margin: 1.2px 24.3px 22.9px 24.3px;
+  background-color: #2539f0;
+  z-index: -1;
+  border-radius: 30px 30px 30px 30px;
+  top: 1490px;
+  left: 520px;
+  position: absolute;
+}
+
+
+.main_pb_background_outer2 {
+  width: 459.9px;
+  height: 269.2px;
+  padding: 0 0 0 0px;
+  opacity: 0.05;
+  z-index: -1;
+  background-color:  #303945;
+  position: absolute;
+  top: 1468px;
+  left: 1075px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.main_pb_background_inner2 {
+  width: 411.3px;
+  height: 223.3px;
+  margin: 1.2px 24.3px 22.9px 24.3px;
+  background-color: #2539f0;
+  z-index: -1;
+  border-radius: 30px 30px 30px 30px;
+  top: 1490px;
+  left: 1075px;
+  position: absolute;
+}
