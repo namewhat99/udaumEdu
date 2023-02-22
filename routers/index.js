@@ -54,9 +54,9 @@ router.get("/api/contents", async (req, res) => {
         let list = [];
 
         for (let key of kl) {
-            if (list.length > 20) break;
+            if (list.length > 25) break;
             db.data[key].forEach((e) => {
-                if (e.contentsType == "3") list.push(e);
+                list.push(e);
             });
         }
 
